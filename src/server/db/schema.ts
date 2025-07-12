@@ -408,3 +408,9 @@ export const user_credits = sqliteTable("user_credits", {
   balance: real("balance").notNull().default(0),
   lastUpdated: integer("last_updated", { mode: "timestamp" }).notNull().default(sql`CURRENT_TIMESTAMP`),
 });
+
+export const magic_links = sqliteTable('magic_links', {
+  token: text('token').primaryKey(),
+  email: text('email').notNull(),
+  expires: integer('expires').notNull(), // Store as ms since epoch
+});

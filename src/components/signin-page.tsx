@@ -14,6 +14,15 @@ interface MagicLinkApiResponse {
     error?: string;
 }
 
+const isDevEnvironment = () => {
+  if (typeof window === "undefined") return false;
+  return (
+    process.env.NODE_ENV === "development" ||
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+  );
+};
+
 const SignInPageClient = () => {    
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -25,6 +34,12 @@ const SignInPageClient = () => {
         setIsLoading(true);
         setMessage(null);
         setError(null);
+
+        if (isDevEnvironment()) {
+            // In dev, just redirect to the instant verify endpoint!
+            window.location.href = `/api/auth/verify-magic-link?token=dev&email=${encodeURIComponent(email)}`;
+            return;
+        }
 
         try {
             const response = await fetch('/api/auth/send-magic-link', {
@@ -109,7 +124,7 @@ const SignInPageClient = () => {
                              disabled={isLoading || !email}
                              className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50"
                          >
-                             {isLoading ? 'Sending...' : 'Send Magic Link'}
+                             {isLoading ? 'Sending...' : isDevEnvironment() ? 'Dev Fast Sign In' : 'Send Magic Link'}
                          </Button>
                     </form>
 
