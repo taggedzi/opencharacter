@@ -4,17 +4,8 @@ import path from "node:path";
 
 function getLocalD1DB() {
   try {
-    const basePath = path.resolve(".wrangler");
-    const dbFile = fs
-      .readdirSync(basePath, { encoding: "utf-8", recursive: true })
-      .find((f) => f.endsWith(".sqlite"));
-
-    if (!dbFile) {
-      throw new Error(`.sqlite file not found in ${basePath}`);
-    }
-
-    const url = path.resolve(basePath, dbFile);
-    return url;
+    // Always return the path to your local SQLite DB
+    return require("path").resolve("./local/opencharacter.sqlite");
   } catch (err) {
     console.log(`Error  ${err}`);
   }

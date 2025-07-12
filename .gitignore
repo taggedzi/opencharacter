@@ -51,3 +51,5 @@ bun.lockb
 ./.vscode
 /.vscode
 .env.local
+
+*.sqlite

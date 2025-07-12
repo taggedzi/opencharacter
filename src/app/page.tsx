@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { db } from "@/server/db";
 import { desc, eq, asc, sql, and, or, SQL } from "drizzle-orm";
 import { characters, users, subscriptions } from "@/server/db/schema";
@@ -11,7 +13,6 @@ import { CTACard, Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { auth } from "@/server/auth";
 
-export const runtime = "edge";
 const ITEMS_PER_PAGE = 36;
 
 async function getTotalPublicCharacters() {

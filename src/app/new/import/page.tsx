@@ -1,7 +1,7 @@
+export const runtime = "nodejs";
 import CreateCharacterImport from "@/components/create-character-import"
 import { auth } from "@/server/auth"
 
-export const runtime = "edge"
 
 export default async function NewCharacterImportPage() {
     const session = await auth()

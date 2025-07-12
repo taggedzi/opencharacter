@@ -1,10 +1,10 @@
+export const runtime = "nodejs";
+
 import React from 'react';
 import { createCharacter } from '@/app/actions/character';
 import { redirect } from 'next/navigation';
 import { CreateCharacterForm } from '@/components/create-character-form';
 import { auth } from '@/server/auth';
-
-export const runtime = "edge";
 
 export default async function NewCharacterPage() {
   const session = await auth()

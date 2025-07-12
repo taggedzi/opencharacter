@@ -1,7 +1,7 @@
+export const runtime = "nodejs";
 import { Card } from "@/components/ui/card";
 import { getModelArray, getMeteredModelArray, getFreeModelArray, getPaidModelArray } from "@/lib/llm_models";
 
-export const runtime = "edge";
 
 interface ModelPricing {
   id: string;

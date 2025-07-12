@@ -1,8 +1,8 @@
+export const runtime = "nodejs";
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Heart } from 'lucide-react'
 
-export const runtime = "edge"
 
 export default function SubmitSuccess() {
   return (

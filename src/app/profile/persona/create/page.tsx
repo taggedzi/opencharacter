@@ -1,9 +1,9 @@
+export const runtime = "nodejs";
 import React from 'react';
 import Link from 'next/link';
 import { auth } from '@/server/auth';
 import CreatePersonaForm from '@/components/create-persona-form';
 
-export const runtime = "edge";
 
 export default async function CreatePersonaPage() {
     const session = await auth()

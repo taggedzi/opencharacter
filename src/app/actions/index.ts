@@ -1,4 +1,4 @@
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 import { continueConversation, getConversations, createChatSession, getAllConversationsByCharacter, saveChat, deleteChatSession } from "./chat";
 import { createCharacter, searchCharacters, searchCharactersByTags } from "./character";

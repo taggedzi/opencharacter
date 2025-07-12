@@ -1,8 +1,8 @@
+export const runtime = "nodejs";
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const runtime = "edge"
 
 export const metadata: Metadata = {
     title: 'Future of OpenCharacter',

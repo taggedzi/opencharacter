@@ -1,9 +1,9 @@
+export const runtime = "nodejs";
 import React from 'react';
 import { auth } from '@/server/auth';
 import SignInButton from "@/components/signin-button"
 import TwitterPageClient from "./twitter-page-client" // We'll create this next
 
-export const runtime = "edge"
 
 export default async function TwitterProfilePage() {
     const session = await auth();

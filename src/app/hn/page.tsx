@@ -1,6 +1,6 @@
+export const runtime = "nodejs"
 import { redirect } from 'next/navigation'
 
-export const runtime = "edge"
 
 export default function HNPage() {
   redirect('/')

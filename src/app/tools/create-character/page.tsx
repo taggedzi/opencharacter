@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { Metadata } from "next";
 import AutoCharacterGenerator from "@/components/auto-character-generator";
 import AuthProvider from "@/components/auth-provider";
@@ -18,7 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const runtime = "edge";
 
 export default function AutoCharacterGeneratorPage() {
   return (

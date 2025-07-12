@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { Suspense } from "react";
 import { ChevronLeft, Lock } from "lucide-react";
 import EllipsisButton from "@/components/chat-settings-button";
@@ -21,7 +23,6 @@ const ChatBackgroundWrapper = dynamic(
   { ssr: false }
 ) as typeof ChatBackgroundWrapperType;
 
-export const runtime = "edge";
 
 export async function generateMetadata({
   params,

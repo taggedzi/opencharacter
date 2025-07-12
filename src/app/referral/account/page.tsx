@@ -1,7 +1,7 @@
+export const runtime = "nodejs";
 import { ReferralAccountForm } from "@/components/referral/ReferralAccountForm";
 import { Suspense } from "react";
 
-export const runtime = "edge";
 
 export default function ReferralAccountPage() {
   return (

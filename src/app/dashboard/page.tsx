@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { auth } from "@/server/auth";
 import { redirect } from "next/navigation";
 import { db } from "@/server/db";
@@ -11,7 +13,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Showcase } from "@/components/showcase";
 
-export const runtime = "edge";
 
 async function getMessageData() {
     const session = await auth();

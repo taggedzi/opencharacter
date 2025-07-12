@@ -1,8 +1,9 @@
+export const runtime = "nodejs";
+
 import { NextResponse } from 'next/server';
 import { auth } from "@/server/auth";
 import { ensureStripeCustomer, stripe } from "@/lib/stripe";
 
-export const runtime = "edge";
 
 export async function POST() {
     const session = await auth();
