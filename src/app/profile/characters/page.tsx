@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import React from 'react';
 import Link from 'next/link';
 import { auth } from '@/server/auth';
@@ -6,7 +8,6 @@ import { eq } from 'drizzle-orm';
 import { characters } from '@/server/db/schema';
 import CharacterList from '@/components/character-list';
 
-export const runtime = "edge"
 
 export default async function CharactersPage() {
     const session = await auth()

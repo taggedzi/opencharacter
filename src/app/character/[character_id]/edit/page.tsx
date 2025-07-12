@@ -1,12 +1,13 @@
-import { CreateCharacterForm } from "@/components/create-character-form"
-import { auth } from "@/server/auth"
+export const runtime = "nodejs";
+
+import { CreateCharacterForm } from "@/components/create-character-form";
+import { auth } from "@/server/auth";
 import { characters } from "@/server/db/schema";
 import { db } from "@/server/db";
 import { eq } from "drizzle-orm";
 import { updateCharacter } from "@/app/actions/character";
 import { redirect } from "next/navigation";
 
-export const runtime = "edge"
 
 export default async function EditCharacterPage({ params }: { params: { character_id: string }}) {
     const session = await auth();

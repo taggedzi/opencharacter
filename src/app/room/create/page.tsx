@@ -1,8 +1,8 @@
+export const runtime = "nodejs";
 import { auth } from "@/server/auth";
 import CreateRoomForm from "@/components/create-room-form";
 import { searchCharacters } from "@/app/actions";
 
-export const runtime = "edge"
 
 export default async function CreateRoomPage() {
     const session = await auth()

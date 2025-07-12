@@ -1,8 +1,8 @@
+export const runtime = "nodejs";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { CheckCircle2, DollarSign, Gift, Users } from "lucide-react";
 
-export const runtime = "edge";
 
 export default function ReferralPage() {
   // Steps for the referral program

@@ -1,6 +1,6 @@
+export const runtime = "nodejs";
 import Image from 'next/image';
 
-export const runtime = "edge";
 
 export default function AboutPage() {
     return (

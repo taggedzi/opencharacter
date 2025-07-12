@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { db } from "@/server/db";
 import { chat_sessions, characters, users } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
@@ -5,7 +7,6 @@ import { notFound } from "next/navigation";
 import MessageAndInput from "@/app/chat/[character_id]/messages-and-input";
 import { auth } from "@/server/auth";
 import { CoreMessage } from "ai";
-export const runtime = "edge";
 
 export default async function PublicChat({ params }: { params: { chat_id: string } }) {
   const session = await auth()

@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { auth } from "@/server/auth";
 import { db } from "@/server/db";
 import { subscriptions } from "@/server/db/schema";
@@ -9,7 +11,6 @@ import { ManageSubscriptionButton } from "@/components/manage-subscription-butto
 import { Separator } from "@/components/ui/separator";
 import { SubscriptionBadge } from "@/components/subscription-badge";
 
-export const runtime = "edge";
 
 export default async function SubscriptionPage() {
   const session = await auth();

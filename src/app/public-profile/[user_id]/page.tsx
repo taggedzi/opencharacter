@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import React from 'react';
 import { auth } from "@/server/auth"
 import { sql } from "drizzle-orm"
@@ -13,7 +15,6 @@ import { Components } from "react-markdown"
 type User = typeof users.$inferSelect;
 type Character = typeof characters.$inferSelect;
 
-export const runtime = "edge"
 
 export default async function ProfileLayout({ params }: { params: { user_id: string } }) {
     const session = await auth()

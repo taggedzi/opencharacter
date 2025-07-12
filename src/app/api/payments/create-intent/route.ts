@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { NextResponse } from 'next/server';
 import { auth } from "@/server/auth";
 import { db } from "@/server/db";
@@ -6,7 +8,6 @@ import { eq } from "drizzle-orm";
 import { ensureStripeCustomer, stripe } from "@/lib/stripe";
 import Stripe from 'stripe';
 
-export const runtime = "edge";
 
 export async function POST(request: Request) {
     const session = await auth();

@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import React from 'react';
 import { db } from "@/server/db"
 import { sql } from 'drizzle-orm';
@@ -6,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from 'next/link';
 import { Users, MessageCircle } from 'lucide-react';
 
-export const runtime = "edge";
 
 type LeaderboardUser = {
     id: string;

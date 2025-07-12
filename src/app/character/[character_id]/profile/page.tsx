@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import React from "react";
 import { ArrowLeft, MessageSquare, Share2, Clock } from "lucide-react";
 import Link from "next/link";
@@ -55,7 +57,6 @@ export async function generateMetadata(
   }
 }
 
-export const runtime = "edge";
 
 const MAX_DESCRIPTION_LENGTH = 500;
 const MAX_MESSAGE_LENGTH = 100;

@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,8 +8,6 @@ import { db } from '@/server/db';
 import { personas } from '@/server/db/schema';
 import { eq } from 'drizzle-orm';
 import PersonaOptions from '@/components/persona-options';
-
-export const runtime = "edge"
 
 export default async function PersonaPage() {
     const session = await auth();

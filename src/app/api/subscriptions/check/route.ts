@@ -1,10 +1,11 @@
+export const runtime = "nodejs";
+
 import { NextResponse } from "next/server";
 import { auth } from "@/server/auth";
 import { db } from "@/server/db";
 import { subscriptions } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
-export const runtime = "edge";
 
 export async function GET() {
   try {

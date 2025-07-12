@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import CreatePersonaForm from "@/components/create-persona-form"
 import { auth } from "@/server/auth"
 import { db } from "@/server/db"
@@ -5,7 +7,6 @@ import { personas } from "@/server/db/schema"
 import { eq, and } from "drizzle-orm"
 import Link from "next/link"
 
-export const runtime = "edge"
 
 export default async function PersonaPageEdit({ params }: { params: { persona_id: string } }) {
     const session = await auth()
